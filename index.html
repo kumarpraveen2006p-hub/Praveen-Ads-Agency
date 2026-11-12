@@ -1,1021 +1,1044 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Praveen Ads Agency | Digital Marketing &amp; Meta Ads Services</title>
-<meta name="description" content="Praveen Ads Agency provides Meta Ads, WhatsApp API, Agency Ad Account, Social Media Marketing and Google Business Profile solutions for businesses.">
-<meta property="og:title" content="Praveen Ads Agency | Digital Marketing & Meta Ads Services">
-<meta property="og:description" content="Meta Ads, WhatsApp API, Agency Ad Accounts, Social Media Marketing and Google Business Profile solutions designed to help businesses grow.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%234F7FFF'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'%3EP%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg: #080B14;
-    --bg-soft: #0E1424;
-    --surface: #131A2E;
-    --surface-2: #182140;
-    --border: rgba(255,255,255,0.08);
-    --border-strong: rgba(255,255,255,0.14);
-    --text: #F3F5FA;
-    --text-muted: #8E97AE;
-    --text-dim: #5D6580;
-    --accent-1: #5B7FFF;
-    --accent-2: #9B6BFF;
-    --accent-grad: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-    --whatsapp: #25D366;
-    --whatsapp-dark: #1DA851;
-    --radius-sm: 10px;
-    --radius-md: 16px;
-    --radius-lg: 24px;
-    --font-display: 'Sora', 'Inter', sans-serif;
-    --font-body: 'Inter', sans-serif;
-    --maxw: 1180px;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoteKaro - Work From Home Jobs & Remote Career Platform</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  *{ box-sizing: border-box; }
-  html{ scroll-behavior: smooth; }
-  body{
-    margin:0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font-body);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-  }
-  img{ max-width:100%; display:block; }
-  a{ color: inherit; text-decoration:none; }
-  ul{ margin:0; padding:0; }
-  button{ font-family: inherit; cursor:pointer; }
-  h1,h2,h3,h4{ font-family: var(--font-display); margin:0; letter-spacing:-0.01em; }
-  p{ margin:0; }
-  .container{ max-width: var(--maxw); margin:0 auto; padding: 0 24px; }
-
-  :focus-visible{ outline: 2px solid var(--accent-1); outline-offset: 3px; border-radius: 4px; }
-
-  @media (prefers-reduced-motion: reduce){
-    *{ animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
-  }
-
-  /* ---------- Background texture ---------- */
-  .bg-glow{
-    position: fixed; inset:0; z-index:-2; pointer-events:none;
-    background:
-      radial-gradient(600px 420px at 85% -5%, rgba(91,127,255,0.20), transparent 60%),
-      radial-gradient(500px 400px at 5% 25%, rgba(155,107,255,0.14), transparent 60%);
-  }
-  .bg-grid{
-    position: fixed; inset:0; z-index:-3; pointer-events:none; opacity:0.35;
-    background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
-    background-size: 44px 44px;
-    mask-image: linear-gradient(to bottom, transparent, black 10%, black 60%, transparent);
-  }
-
-  /* ---------- Navbar ---------- */
-  .navbar{
-    position: relative; top:0; z-index: 500;
-    background: rgba(8,11,20,0.72);
-    backdrop-filter: blur(14px) saturate(140%);
-    border-bottom: 1px solid var(--border);
-    transition: background .3s ease, border-color .3s ease;
-  }
-  .nav-inner{
-    display:flex; align-items:center; justify-content:space-between;
-    padding: 14px 24px; max-width: var(--maxw); margin:0 auto;
-  }
-  .brand{ display:flex; align-items:center; gap:10px; font-family: var(--font-display); font-weight:700; font-size:1.05rem; }
-  .brand-mark{
-    width:34px; height:34px; border-radius:50%; flex-shrink:0;
-    object-fit: cover; border: 1.5px solid var(--border-strong);
-    box-shadow: 0 4px 18px rgba(91,127,255,0.35);
-  }
-  .nav-links{ display:flex; gap:30px; align-items:center; }
-  .nav-links a{
-    font-size:0.95rem; color: var(--text-muted); font-weight:500; position:relative; padding:6px 0;
-    transition: color .2s ease;
-  }
-  .nav-links a:hover, .nav-links a.active{ color: var(--text); }
-  .nav-links a.active::after{
-    content:''; position:absolute; left:0; right:0; bottom:-2px; height:2px; background: var(--accent-grad); border-radius:2px;
-  }
-  .nav-cta{ display:flex; align-items:center; gap:14px; }
-  .btn{
-    display:inline-flex; align-items:center; justify-content:center; gap:8px;
-    padding: 11px 20px; border-radius: 999px; font-weight:600; font-size:0.92rem;
-    border:1px solid transparent; transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
-    white-space: nowrap;
-  }
-  .btn:active{ transform: translateY(1px) scale(0.99); }
-  .btn-primary{
-    background: var(--accent-grad); color:#fff; box-shadow: 0 8px 22px rgba(91,127,255,0.30);
-  }
-  .btn-primary:hover{ box-shadow: 0 10px 28px rgba(91,127,255,0.45); transform: translateY(-1px); }
-  .btn-whatsapp{
-    background: var(--whatsapp); color:#06210F; box-shadow: 0 8px 22px rgba(37,211,102,0.28);
-  }
-  .btn-whatsapp:hover{ background: var(--whatsapp-dark); box-shadow: 0 10px 26px rgba(37,211,102,0.4); transform: translateY(-1px); }
-  .btn-ghost{
-    background: transparent; border-color: var(--border-strong); color: var(--text);
-  }
-  .btn-ghost:hover{ background: rgba(255,255,255,0.06); }
-  .btn svg{ width:17px; height:17px; flex-shrink:0; }
-
-  .hamburger{
-    display:none; width:40px; height:40px; border-radius:8px; background: var(--surface);
-    border:1px solid var(--border); align-items:center; justify-content:center; flex-direction:column; gap:4px;
-  }
-  .hamburger span{ width:18px; height:2px; background: var(--text); border-radius:2px; transition: all .25s ease; }
-  .hamburger.open span:nth-child(1){ transform: translateY(6px) rotate(45deg); }
-  .hamburger.open span:nth-child(2){ opacity:0; }
-  .hamburger.open span:nth-child(3){ transform: translateY(-6px) rotate(-45deg); }
-
-  .mobile-menu{
-    display:none; flex-direction:column; gap:2px; padding: 10px 24px 18px;
-    border-top:1px solid var(--border); background: rgba(8,11,20,0.98);
-  }
-  .mobile-menu a{ padding:12px 4px; color: var(--text-muted); font-weight:500; border-bottom:1px solid var(--border); }
-  .mobile-menu a:last-child{ border-bottom:none; }
-  .mobile-menu.show{ display:flex; }
-
-  /* ---------- Hero ---------- */
-  .hero{ padding: 96px 0 70px; position:relative; }
-  .hero-grid{ display:grid; grid-template-columns: 1.05fr 0.95fr; gap:56px; align-items:center; }
-  .hero-copy h1{
-    font-size: clamp(2.3rem, 4.4vw, 3.5rem); line-height:1.08; font-weight:700; color:#fff;
-  }
-  .hero-copy .sub{
-    margin-top:20px; font-size:1.08rem; color: var(--text-muted); max-width: 520px; line-height:1.65;
-  }
-  .hero-ctas{ display:flex; gap:14px; margin-top:32px; flex-wrap:wrap; }
-  .trust-row{ display:flex; gap:22px; margin-top:34px; flex-wrap:wrap; }
-  .trust-item{ display:flex; align-items:center; gap:8px; font-size:0.88rem; color: var(--text-muted); }
-  .trust-item svg{ width:16px; height:16px; color: var(--accent-1); flex-shrink:0; }
-
-  /* Hero visual: animated "dashboard" */
-  .hero-visual{ position:relative; }
-  .dash{
-    background: linear-gradient(160deg, var(--surface), var(--surface-2));
-    border:1px solid var(--border-strong); border-radius: var(--radius-lg);
-    padding: 22px; box-shadow: 0 30px 70px -20px rgba(0,0,0,0.6);
-    position:relative; overflow:hidden;
-  }
-  .dash::before{
-    content:''; position:absolute; top:-40%; right:-30%; width:70%; height:140%;
-    background: radial-gradient(circle, rgba(91,127,255,0.18), transparent 65%);
-  }
-  .dash-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; }
-  .dash-title{ font-size:0.82rem; color: var(--text-muted); font-weight:600; }
-  .dash-dot{ width:8px; height:8px; border-radius:50%; background: var(--whatsapp); box-shadow: 0 0 0 4px rgba(37,211,102,0.18); animation: pulse 2s infinite; }
-  @keyframes pulse{ 0%,100%{ box-shadow:0 0 0 4px rgba(37,211,102,0.18);} 50%{ box-shadow:0 0 0 8px rgba(37,211,102,0.08);} }
-  .dash-bars{ display:flex; align-items:flex-end; gap:10px; height:120px; margin-bottom:20px; }
-  .dash-bars span{
-    flex:1; border-radius: 6px 6px 0 0; background: linear-gradient(180deg, var(--accent-2), var(--accent-1));
-    opacity:0.85; transform-origin:bottom; animation: rise 1.2s cubic-bezier(.2,.8,.2,1) both;
-  }
-  @keyframes rise{ from{ transform: scaleY(0); } to{ transform: scaleY(1); } }
-  .dash-rows{ display:flex; flex-direction:column; gap:10px; }
-  .dash-row{
-    display:flex; align-items:center; gap:10px; padding:10px 12px; background: rgba(255,255,255,0.03);
-    border:1px solid var(--border); border-radius:10px; font-size:0.82rem; color: var(--text-muted);
-  }
-  .dash-row .ic{
-    width:26px; height:26px; border-radius:7px; background: var(--accent-grad); flex-shrink:0;
-    display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.7rem; font-weight:700;
-  }
-  .dash-row b{ color: var(--text); font-weight:600; }
-  .float-chip{
-    position:absolute; padding:10px 14px; background: var(--surface); border:1px solid var(--border-strong);
-    border-radius: 12px; font-size:0.8rem; font-weight:600; display:flex; align-items:center; gap:8px;
-    box-shadow: 0 14px 30px -10px rgba(0,0,0,0.5); animation: float 5s ease-in-out infinite;
-  }
-  .float-chip.one{ top:-16px; left:-24px; animation-delay:0s; }
-  .float-chip.two{ bottom:-18px; right:-16px; animation-delay:1.2s; }
-  .float-chip .dot{ width:8px; height:8px; border-radius:50%; background: var(--whatsapp); }
-  @keyframes float{ 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-8px); } }
-
-  @media (min-width: 0px){
-    .dash-bars span:nth-child(1){ height:55%; animation-delay:.05s;}
-    .dash-bars span:nth-child(2){ height:80%; animation-delay:.15s;}
-    .dash-bars span:nth-child(3){ height:40%; animation-delay:.25s;}
-    .dash-bars span:nth-child(4){ height:95%; animation-delay:.35s;}
-    .dash-bars span:nth-child(5){ height:65%; animation-delay:.45s;}
-    .dash-bars span:nth-child(6){ height:75%; animation-delay:.55s;}
-  }
-
-  /* ---------- Section shell ---------- */
-  section{ padding: 88px 0; position:relative; }
-  .section-head{ max-width: 620px; margin-bottom: 46px; }
-  .section-head h2{ font-size: clamp(1.7rem, 3vw, 2.3rem); color:#fff; font-weight:700; }
-  .section-head p{ margin-top:14px; color: var(--text-muted); font-size:1.02rem; }
-
-  .reveal{ opacity:0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
-  .reveal.in{ opacity:1; transform: translateY(0); }
-
-  /* ---------- Services ---------- */
-  .services-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; }
-  .service-card{
-    background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-md);
-    padding: 28px 24px; display:flex; flex-direction:column; gap:16px;
-    transition: transform .25s ease, border-color .25s ease, background .25s ease;
-    cursor:pointer; text-align:left;
-  }
-  .service-card:hover{ transform: translateY(-4px); border-color: var(--border-strong); background: var(--surface-2); }
-  .service-icon{
-    width:46px; height:46px; border-radius:12px; background: var(--accent-grad);
-    display:flex; align-items:center; justify-content:center; color:#fff;
-  }
-  .service-icon svg{ width:22px; height:22px; }
-  .service-card h3{ font-size:1.15rem; color:#fff; font-weight:650; }
-  .service-card .desc{ color: var(--text-muted); font-size:0.92rem; line-height:1.55; }
-  .service-features{ display:flex; flex-direction:column; gap:7px; margin-top:2px; }
-  .service-features li{ list-style:none; font-size:0.85rem; color: var(--text-dim); display:flex; gap:8px; align-items:flex-start; }
-  .service-features li svg{ width:14px; height:14px; margin-top:3px; color: var(--accent-1); flex-shrink:0; }
-  .service-cta{
-    margin-top:auto; padding-top:6px; font-size:0.92rem; font-weight:600; color: var(--accent-1);
-    display:flex; align-items:center; gap:6px; transition: gap .2s ease;
-  }
-  .service-card:hover .service-cta{ gap:10px; }
-
-  /* ---------- Why us ---------- */
-  .why-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap:18px; }
-  .why-card{
-    background: linear-gradient(160deg, var(--surface), rgba(19,26,46,0.4));
-    border:1px solid var(--border); border-radius: var(--radius-md); padding:24px 20px;
-  }
-  .why-card .num{ font-family: var(--font-display); font-size:0.8rem; color: var(--accent-1); font-weight:700; letter-spacing:0.02em; }
-  .why-card h4{ margin-top:12px; font-size:1.02rem; color:#fff; font-weight:650; }
-  .why-card p{ margin-top:10px; font-size:0.88rem; color: var(--text-muted); line-height:1.55; }
-
-  /* ---------- Process ---------- */
-  .process-wrap{ position:relative; }
-  .process-line{
-    position:absolute; top:26px; left:6%; right:6%; height:2px;
-    background: linear-gradient(90deg, transparent, var(--border-strong) 10%, var(--border-strong) 90%, transparent);
-  }
-  .process-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap:20px; position:relative; }
-  .process-step{ text-align:left; }
-  .process-dot{
-    width:52px; height:52px; border-radius:50%; background: var(--surface); border:1px solid var(--border-strong);
-    display:flex; align-items:center; justify-content:center; font-family: var(--font-display); font-weight:700;
-    color: var(--accent-1); margin-bottom:18px; position:relative; z-index:2;
-  }
-  .process-step h4{ font-size:1rem; color:#fff; font-weight:650; }
-  .process-step p{ margin-top:8px; font-size:0.87rem; color: var(--text-muted); line-height:1.55; }
-
-  /* ---------- Callout ---------- */
-  .callout{
-    background: linear-gradient(135deg, rgba(91,127,255,0.14), rgba(155,107,255,0.10));
-    border:1px solid var(--border-strong); border-radius: var(--radius-lg);
-    padding: 50px 44px; display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap;
-  }
-  .callout h3{ font-size:1.5rem; color:#fff; max-width:480px; }
-  .callout p{ margin-top:10px; color: var(--text-muted); max-width:460px; font-size:0.96rem; }
-
-  /* ---------- About ---------- */
-  .about-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:56px; align-items:start; }
-  .about-copy p{ color: var(--text-muted); font-size:1rem; line-height:1.75; }
-  .about-copy p + p{ margin-top:16px; }
-  .about-list{ display:flex; flex-direction:column; gap:14px; margin-top:8px; }
-  .about-list li{ list-style:none; display:flex; gap:12px; align-items:flex-start; font-size:0.94rem; color: var(--text-muted); }
-  .about-list li svg{ width:18px; height:18px; color: var(--whatsapp); flex-shrink:0; margin-top:2px; }
-
-  /* ---------- Lead form ---------- */
-  .lead-wrap{
-    background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-lg);
-    padding: 42px; display:grid; grid-template-columns: 0.9fr 1.1fr; gap:40px;
-  }
-  .lead-copy h2{ font-size:1.7rem; color:#fff; }
-  .lead-copy p{ margin-top:14px; color: var(--text-muted); font-size:0.98rem; line-height:1.6; }
-  .form-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
-  .field{ display:flex; flex-direction:column; gap:7px; }
-  .field.full{ grid-column: 1 / -1; }
-  .field label{ font-size:0.82rem; color: var(--text-muted); font-weight:500; }
-  .field input, .field select, .field textarea{
-    background: rgba(255,255,255,0.03); border:1px solid var(--border-strong); border-radius:10px;
-    padding: 12px 14px; color: var(--text); font-size:0.92rem; font-family: inherit; width:100%;
-    transition: border-color .2s ease, background .2s ease;
-  }
-  .field input::placeholder, .field textarea::placeholder{ color: var(--text-dim); }
-  .field input:focus, .field select:focus, .field textarea:focus{ border-color: var(--accent-1); background: rgba(255,255,255,0.05); }
-  .field textarea{ resize:vertical; min-height:80px; }
-  .field.error input, .field.error select, .field.error textarea{ border-color:#F0576B; }
-  .field .err-msg{ font-size:0.76rem; color:#F0576B; display:none; }
-  .field.error .err-msg{ display:block; }
-  .form-submit{ margin-top: 6px; width:100%; padding:14px; font-size:0.96rem; }
-
-  /* ---------- FAQ ---------- */
-  .faq-list{ display:flex; flex-direction:column; gap:12px; max-width: 760px; }
-  .faq-item{
-    background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-sm); overflow:hidden;
-  }
-  .faq-q{
-    width:100%; background:none; border:none; color: var(--text); text-align:left; padding: 18px 20px;
-    display:flex; align-items:center; justify-content:space-between; gap:16px; font-size:0.98rem; font-weight:600;
-  }
-  .faq-q .chev{ width:18px; height:18px; flex-shrink:0; transition: transform .25s ease; color: var(--text-muted); }
-  .faq-item.open .faq-q .chev{ transform: rotate(180deg); color: var(--accent-1); }
-  .faq-a{ max-height:0; overflow:hidden; transition: max-height .3s ease; }
-  .faq-a-inner{ padding: 0 20px 18px; color: var(--text-muted); font-size:0.9rem; line-height:1.6; }
-
-  /* ---------- Contact ---------- */
-  .contact-grid{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap:40px; align-items:center; }
-  .contact-card{
-    background: linear-gradient(160deg, var(--surface), var(--surface-2)); border:1px solid var(--border-strong);
-    border-radius: var(--radius-lg); padding: 34px; text-align:center;
-  }
-  .contact-card .brand{ justify-content:center; font-size:1.2rem; margin-bottom:14px; }
-  .contact-services{ margin-top:16px; color: var(--text-muted); font-size:0.86rem; line-height:1.7; }
-  .contact-links{ display:flex; justify-content:center; gap:14px; margin-top:22px; flex-wrap:wrap; }
-  .icon-link{
-    width:40px; height:40px; border-radius:10px; background: rgba(255,255,255,0.05); border:1px solid var(--border-strong);
-    display:flex; align-items:center; justify-content:center; transition: background .2s ease, transform .2s ease;
-  }
-  .icon-link:hover{ background: rgba(255,255,255,0.1); transform: translateY(-2px); }
-  .icon-link svg{ width:18px; height:18px; }
-
-  /* ---------- Footer ---------- */
-  footer{ border-top:1px solid var(--border); padding: 44px 0 28px; }
-  .footer-grid{ display:flex; justify-content:space-between; align-items:flex-start; gap:30px; flex-wrap:wrap; }
-  .footer-tag{ margin-top:10px; color: var(--text-muted); font-size:0.88rem; max-width:280px; }
-  .footer-links{ display:flex; gap:26px; flex-wrap:wrap; }
-  .footer-links a{ color: var(--text-muted); font-size:0.88rem; }
-  .footer-links a:hover{ color: var(--text); }
-  .footer-bottom{ margin-top:34px; padding-top:20px; border-top:1px solid var(--border); font-size:0.8rem; color: var(--text-dim); text-align:center; }
-
-  /* ---------- Floating WhatsApp ---------- */
-  .fab{
-    position: fixed; bottom:24px; right:24px; z-index:600;
-    width:58px; height:58px; border-radius:50%; background: var(--whatsapp);
-    display:flex; align-items:center; justify-content:center; box-shadow: 0 10px 30px rgba(37,211,102,0.45);
-    border:none; transition: transform .2s ease;
-  }
-  .fab:hover{ transform: scale(1.08); }
-  .fab svg{ width:28px; height:28px; color:#08240F; }
-  .fab-tooltip{
-    position:absolute; right:70px; top:50%; transform: translateY(-50%);
-    background: var(--surface); border:1px solid var(--border-strong); padding:8px 14px; border-radius:8px;
-    font-size:0.85rem; white-space:nowrap; opacity:0; pointer-events:none; transition: opacity .2s ease;
-  }
-  .fab:hover .fab-tooltip{ opacity:1; }
-  @media (max-width: 720px){ .fab-tooltip{ display:none; } }
-
-  /* ---------- Back to top ---------- */
-  .to-top{
-    position: fixed; bottom:24px; left:24px; z-index:600; width:44px; height:44px; border-radius:50%;
-    background: var(--surface); border:1px solid var(--border-strong); display:flex; align-items:center; justify-content:center;
-    opacity:0; pointer-events:none; transition: opacity .25s ease, transform .2s ease;
-  }
-  .to-top.show{ opacity:1; pointer-events:auto; }
-  .to-top:hover{ transform: translateY(-2px); }
-  .to-top svg{ width:18px; height:18px; color: var(--text-muted); }
-
-  /* ---------- Toast ---------- */
-  .toast{
-    position: fixed; bottom:96px; right:24px; z-index:700; background: var(--surface); border:1px solid var(--border-strong);
-    border-radius:12px; padding: 14px 18px; display:flex; align-items:center; gap:10px; font-size:0.9rem;
-    box-shadow: 0 16px 40px -10px rgba(0,0,0,0.6); transform: translateY(20px); opacity:0; transition: all .3s ease; max-width: 280px;
-  }
-  .toast.show{ transform: translateY(0); opacity:1; }
-  .toast .dot{ width:8px; height:8px; border-radius:50%; background: var(--whatsapp); flex-shrink:0; }
-
-  /* ---------- Modal ---------- */
-  .modal-overlay{
-    position: fixed; inset:0; background: rgba(4,6,12,0.72); backdrop-filter: blur(6px);
-    z-index:800; display:none; align-items:center; justify-content:center; padding:20px;
-  }
-  .modal-overlay.show{ display:flex; }
-  .modal{
-    background: var(--bg-soft); border:1px solid var(--border-strong); border-radius: var(--radius-lg);
-    max-width: 480px; width:100%; max-height:88vh; overflow-y:auto; padding: 30px;
-    animation: modalIn .25s ease;
-  }
-  @keyframes modalIn{ from{ opacity:0; transform: translateY(14px) scale(0.98);} to{ opacity:1; transform: translateY(0) scale(1);} }
-  .modal-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:14px; }
-  .modal-icon{ width:42px; height:42px; border-radius:11px; background: var(--accent-grad); display:flex; align-items:center; justify-content:center; color:#fff; }
-  .modal-icon svg{ width:20px; height:20px; }
-  .modal-close{ background:none; border:none; color: var(--text-muted); width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; }
-  .modal-close:hover{ background: rgba(255,255,255,0.06); color:#fff; }
-  .modal h3{ margin-top:16px; font-size:1.25rem; color:#fff; }
-  .modal .desc{ margin-top:8px; color: var(--text-muted); font-size:0.9rem; line-height:1.55; }
-  .modal-features{ display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
-  .modal-features span{
-    font-size:0.78rem; padding:6px 11px; border-radius:999px; background: rgba(255,255,255,0.05);
-    border:1px solid var(--border); color: var(--text-muted);
-  }
-  .modal-form{ margin-top:22px; display:flex; flex-direction:column; gap:14px; }
-
-  /* Utility */
-  .hide-desktop{ display:none; }
-  @media (max-width: 980px){
-    .services-grid{ grid-template-columns: repeat(2,1fr); }
-    .why-grid{ grid-template-columns: repeat(2,1fr); }
-    .process-grid{ grid-template-columns: repeat(2,1fr); }
-    .process-line{ display:none; }
-    .about-grid{ grid-template-columns: 1fr; }
-    .lead-wrap{ grid-template-columns: 1fr; padding:30px; }
-    .contact-grid{ grid-template-columns: 1fr; }
-  }
-  @media (max-width: 760px){
-    .nav-links{ display:none; }
-    .nav-cta .btn-ghost{ display:none; }
-    .hamburger{ display:flex; }
-    .hero-grid{ grid-template-columns: 1fr; }
-    .hero{ padding:64px 0 50px; text-align:left; }
-    .hero-visual{ order:-1; margin-bottom: 10px; }
-    .services-grid{ grid-template-columns: 1fr; }
-    .why-grid{ grid-template-columns: 1fr; }
-    .process-grid{ grid-template-columns: 1fr; }
-    .form-grid{ grid-template-columns: 1fr; }
-    .callout{ padding:32px 24px; }
-    section{ padding:60px 0; }
-    .footer-grid{ flex-direction:column; }
-  }
-</style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        telegram: {
+                            500: '#0088cc',
+                            600: '#0077b5',
+                            700: '#006699'
+                        },
+                        brand: {
+                            50: '#f0f5ff',
+                            100: '#e0ebff',
+                            500: '#4361ee',
+                            600: '#3a0ca3',
+                            700: '#4cc9f0',
+                            accent: '#10b981',
+                            warning: '#f72585'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #4361ee 0%, #7209b7 50%, #f72585 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: radial-gradient(circle at 50% 0%, rgba(67, 97, 238, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.15); opacity: 0.4; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+        .pulse-ring-effect {
+            animation: pulse-ring 2s infinite ease-in-out;
+        }
+    </style>
 </head>
-<body>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-brand-500 selection:text-white">
 
-<div class="bg-glow"></div>
-<div class="bg-grid"></div>
-
-<!-- ===================== NAVBAR ===================== -->
-<nav class="navbar" id="navbar">
-  <div class="nav-inner">
-    <a href="#home" class="brand"><img class="brand-mark" src="plog.jpeg" alt="Praveen Ads Agency logo"> Praveen Ads Agency</a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home" class="nav-link active">Home</a></li>
-      <li><a href="#services" class="nav-link">Services</a></li>
-      <li><a href="#why-us" class="nav-link">Why Us</a></li>
-      <li><a href="#process" class="nav-link">Process</a></li>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#faq" class="nav-link">FAQ</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
-    <div class="nav-cta">
-      <a href="#contact" class="btn btn-ghost hide-desktop-none">Contact</a>
-      <button class="btn btn-whatsapp" onclick="openGeneralWhatsApp()">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.7-1-2.4-1.7-.6-.6-1.1-1.3-1.5-2.1-.1-.2 0-.4.1-.5.2-.2.4-.4.6-.6.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.1.6 2.2 1.3 3.2 1.4 2 3.2 3.5 5.4 4.3 1 .4 1.9.5 2.5.4.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.4-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
-        Chat on WhatsApp
-      </button>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <!-- Top Announcement Bar with Direct Telegram Link -->
+    <div class="bg-gradient-to-r from-telegram-600 via-indigo-600 to-emerald-600 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-sm flex items-center justify-center gap-2 flex-wrap">
+        <span class="bg-white/20 text-white text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">🔥 100% Free Application</span>
+        <span>500+ Verified WFH Jobs Active Today!</span>
+        <a href="https://t.me/+39Qbst0JEZNmNTll" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-bold underline hover:text-amber-300 ml-1">
+            <i class="fa-brands fa-telegram"></i> Join Telegram For Daily Direct HR Contact Alerts →
+        </a>
     </div>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#why-us">Why Us</a>
-    <a href="#process">Process</a>
-    <a href="#about">About</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
 
-<!-- ===================== HERO ===================== -->
-<section class="hero" id="home">
-  <div class="container hero-grid">
-    <div class="hero-copy reveal in">
-      <h1>Grow Your Business With Powerful Digital Marketing</h1>
-      <p class="sub">Meta Ads, WhatsApp API, Agency Ad Accounts, Social Media Marketing and Google Business Profile solutions designed to help businesses generate more enquiries and build a stronger online presence.</p>
-      <div class="hero-ctas">
-        <button class="btn btn-whatsapp" onclick="openGeneralWhatsApp()">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.7-1-2.4-1.7-.6-.6-1.1-1.3-1.5-2.1-.1-.2 0-.4.1-.5.2-.2.4-.4.6-.6.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.1.6 2.2 1.3 3.2 1.4 2 3.2 3.5 5.4 4.3 1 .4 1.9.5 2.5.4.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.4-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
-          Get Started on WhatsApp
-        </button>
-        <a href="#services" class="btn btn-ghost">Explore Services</a>
-      </div>
-      <div class="trust-row">
-        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Digital Marketing Solutions</div>
-        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> WhatsApp Lead Support</div>
-        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Business Growth Strategy</div>
-      </div>
-    </div>
-    <div class="hero-visual reveal in">
-      <div class="dash">
-        <div class="float-chip one"><span class="dot"></span> New enquiry received</div>
-        <div class="dash-head">
-          <span class="dash-title">Campaign Overview</span>
-          <span class="dash-dot"></span>
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-500 to-indigo-600 flex items-center justify-center text-white text-xl font-black shadow-lg shadow-brand-500/30">
+                    <i class="fa-solid fa-laptop-house"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-extrabold tracking-tight text-slate-900">Remote<span class="text-brand-500">Karo</span></span>
+                    <span class="text-[10px] text-slate-500 font-semibold -mt-1">Ghar Se Kaam, Flexi Pay</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-7 font-semibold text-slate-600 text-sm">
+                <a href="#benefits" class="hover:text-brand-500 transition-colors">Benefits</a>
+                <a href="#jobs" class="hover:text-brand-500 transition-colors">Open Jobs</a>
+                <a href="https://t.me/+39Qbst0JEZNmNTll" target="_blank" rel="noopener noreferrer" class="hover:text-telegram-500 transition-colors flex items-center gap-1">
+                    <i class="fa-brands fa-telegram text-telegram-500 text-base"></i> Telegram Channel
+                </a>
+                <a href="#calculator" class="hover:text-brand-500 transition-colors">Income Calculator</a>
+                <a href="#how-it-works" class="hover:text-brand-500 transition-colors">How It Works</a>
+                <a href="#faqs" class="hover:text-brand-500 transition-colors">FAQs</a>
+            </nav>
+
+            <!-- Header Action Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="https://t.me/+39Qbst0JEZNmNTll" target="_blank" rel="noopener noreferrer" class="bg-telegram-500 hover:bg-telegram-600 text-white px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center gap-2 shadow-md shadow-telegram-500/20 hover:scale-[1.02] active:scale-95 transition-all">
+                    <i class="fa-brands fa-telegram text-lg"></i>
+                    <span>Join Telegram</span>
+                </a>
+                <button onclick="openApplyModal('Navbar Free Apply')" class="bg-gradient-to-r from-brand-500 to-indigo-600 text-white px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md hover:shadow-brand-500/25 hover:scale-[1.02] active:scale-95 transition-all">
+                    Apply Now <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Hamburger Menu Button -->
+            <button id="mobileMenuBtn" class="lg:hidden text-slate-700 hover:text-brand-500 focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
         </div>
-        <div class="dash-bars">
-          <span></span><span></span><span></span><span></span><span></span><span></span>
+
+        <!-- Mobile Menu Navigation -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3">
+            <a href="#benefits" class="block py-2 text-slate-700 font-medium hover:text-brand-500">Benefits</a>
+            <a href="#jobs" class="block py-2 text-slate-700 font-medium hover:text-brand-500">Open Jobs</a>
+            <a href="https://t.me/+39Qbst0JEZNmNTll" target="_blank" rel="noopener noreferrer" class="block py-2 text-telegram-500 font-bold flex items-center gap-2">
+                <i class="fa-brands fa-telegram text-xl"></i> Join Telegram Channel (45K+ Members)
+            </a>
+            <a href="#calculator" class="block py-2 text-slate-700 font-medium hover:text-brand-500">Income Calculator</a>
+            <a href="#how-it-works" class="block py-2 text-slate-700 font-medium hover:text-brand-500">How It Works</a>
+            <a href="#faqs" class="block py-2 text-slate-700 font-medium hover:text-brand-500">FAQs</a>
+            
+            <div class="grid grid-cols-2 gap-3 pt-2">
+                <a href="https://t.me/+39Qbst0JEZNmNTll" target="_blank" rel="noopener noreferrer" class="bg-telegram-500 text-white py-3 rounded-xl font-bold text-center text-sm shadow-md flex items-center justify-center gap-1.5">
+                    <i class="fa-brands fa-telegram text-lg"></i> Telegram
+                </a>
+                <button onclick="openApplyModal('Mobile Menu Application')" class="bg-brand-500 text-white py-3 rounded-xl font-bold text-center text-sm shadow-md">
+                    Instant Apply
+                </button>
+            </div>
         </div>
-        <div class="dash-rows">
-          <div class="dash-row"><span class="ic">M</span> Meta Ads — <b>Active</b></div>
-          <div class="dash-row"><span class="ic">W</span> WhatsApp API — <b>Connected</b></div>
-          <div class="dash-row"><span class="ic">G</span> Google Business Profile — <b>Optimized</b></div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-10 pb-16 lg:pt-16 lg:pb-24 overflow-hidden hero-bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Hero Text -->
+                    <div class="lg:col-span-7 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs sm:text-sm font-semibold mb-6">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <span>2,400+ Verified Remote Openings Active Today</span>
+                        </div>
+                        
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15] mb-6">
+                            Ghar Baith Kar Earn Karein <br class="hidden sm:inline">
+                            <span class="gradient-text">₹25,000 - ₹90,000+</span> Har Mahine!
+                        </h1>
+
+                        <p class="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Bina daily commute aur office tension! Apne time schedule par top Indian & global companies ke liye kaam karein. Freshers aur experienced sabhi ke liye 100% free verified roles.
+                        </p>
+
+                        <!-- Primary CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+                            <!-- Apply Button -->
+                            <button onclick="openApplyModal('Hero Direct Apply')" class="w-full sm:w-auto bg-gradient-to-r from-brand-500 via-indigo-600 to-brand-600 text-white text-base sm:text-lg font-bold px-7 py-4 rounded-2xl shadow-xl shadow-brand-500/30 hover:shadow-2xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2.5">
+                                <i class="fa-solid fa-bolt text-yellow-300"></i>
+                                <span>Apply For Jobs Free</span>
+                            </button>
+
+                            <!-- Hero Telegram Button with link -->
+                            <a href="https://t.me/+39Qbst0JEZNmNTll" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-telegram-500 hover:bg-telegram-600 text-white text-base sm:text-lg font-bold px-7 py-4 rounded-2xl shadow-xl shadow-telegram-500/30 hover:shadow-2xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2.5">
+                                <i class="fa-brands fa-telegram text-2xl"></i>
+                                <span>Join Telegram Alerts</span>
+                            </a>
+                        </div>
+
+                        <!-- Trust Markers -->
+                        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200/80 max-w-xl mx-auto lg:mx-0">
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">100%</div>
+                                <div class="text-xs sm:text-sm text-slate-500 font-medium">Verified Jobs</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">45K+</div>
+                                <div class="text-xs sm:text-sm text-slate-500 font-medium">Telegram Members</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">₹0</div>
+                                <div class="text-xs sm:text-sm text-slate-500 font-medium">Registration Fee</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Quick Form Card -->
+                    <div class="lg:col-span-5">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="absolute -top-6 -right-6 w-72 h-72 bg-gradient-to-br from-brand-500/20 to-telegram-500/20 rounded-full blur-3xl -z-10"></div>
+                            
+                            <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+                                <div class="flex items-center justify-between mb-6">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xl">
+                                            <i class="fa-solid fa-shield-halved"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-slate-900 text-base">Quick Profile Match</h3>
+                                            <p class="text-xs text-slate-500">Takes less than 60 seconds</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs bg-brand-50 text-brand-600 px-2.5 py-1 rounded-full font-bold">Fast-Track</span>
+                                </div>
+
+                                <!-- Quick Mini Form -->
+                                <form id="quickHeroForm" onsubmit="handleQuickSubmit(event)" class="space-y-4">
+                                    <div>
+                                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Aapka Full Name</label>
+                                        <input type="text" id="heroName" required placeholder="e.g. Rahul Sharma" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-white">
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Mobile / WhatsApp Number</label>
+                                        <div class="flex">
+                                            <span class="inline-flex items-center px-3 rounded-l-xl border border-r-0 border-slate-200 bg-slate-100 text-slate-600 text-sm font-semibold">+91</span>
+                                            <input type="tel" id="heroPhone" required pattern="[0-9]{10}" placeholder="10 digit number" class="w-full px-4 py-3 rounded-r-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-white">
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Preferred Work Field</label>
+                                        <select id="heroRole" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-white text-slate-700">
+                                            <option value="Customer Support">Customer Support / Telecalling</option>
+                                            <option value="Data Entry / Back Office">Data Entry / Back Office</option>
+                                            <option value="Content Writing">Content Writing / Translation</option>
+                                            <option value="Digital Marketing">Social Media & Marketing</option>
+                                            <option value="IT & Web Development">IT & Web Development</option>
+                                        </select>
+                                    </div>
+
+                                    <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-emerald-500/25 transition-all text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+                                        <span>Get Instant Matching Jobs</span>
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+                                </form>
+
+                                <!-- Direct Telegram Link in Card -->
+                                <div class="mt-4 pt-3 border-t border-slate-200/80 text-center">
+                                    <p class="text-xs text-slate-500">
+                                        Prefer Telegram updates? 
+                                        <a href="https://t.me/+39Qbst0JEZNmNTll" target="_blank" rel="noopener noreferrer" class="text-telegram-500 font-bold hover:underline inline-flex items-center gap-1">
+                                            <i class="fa-brands fa-telegram"></i> Click Here To Join Channel
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Dedicated Telegram Banner Section with Direct Channel Link -->
+        <section id="telegram-section" class="py-12 bg-gradient-to-r from-telegram-600 via-sky-600 to-indigo-700 text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-6 sm:p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+                    
+                    <div class="flex items-center gap-5 text-center md:text-left">
+                        <div class="w-20 h-20 rounded-3xl bg-white text-telegram-500 flex items-center justify-center text-4xl shadow-xl shrink-0 mx-auto md:mx-0">
+                            <i class="fa-brands fa-telegram"></i>
+                        </div>
+                        <div>
+                            <div class="inline-flex items-center gap-2 bg-amber-400 text-slate-900 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider mb-2">
+                                <i class="fa-solid fa-bolt"></i> Official Direct Join Link
+                            </div>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Daily WFH Job Openings Direct On Telegram</h2>
+                            <p class="text-sky-100 text-sm mt-1 max-w-xl">
+                                Join 45,000+ candidates! Har roz morning me direct HR numbers, walk-in remote interviews aur high-paying work-from-home vacancies receive karein.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto shrink-0">
+                        <div class="text-center md:text-right hidden lg:block mr-2">
+                            <div class="text-2xl font-black text-white">45,800+</div>
+                            <div class="text-xs text-sky-200">Active Telegram Subscribers</div>
+                        </div>
+                        <a href="https://t.me/+39Qbst0JEZNmNTll" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-white text-telegram-600 hover:bg-slate-100 font-extrabold text-base px-8 py-4 rounded-2xl shadow-xl hover:scale-105 active:scale-95 transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-telegram text-2xl"></i>
+                            <span>Join Telegram Channel Free</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Work From Home? (Key Benefits) -->
+        <section id="benefits" class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-500 font-bold text-sm tracking-wider uppercase bg-brand-50 px-3 py-1 rounded-full">Kyun Remote Work Chunne?</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-4">Ghar Se Kaam Karne Ke Sabse Bade Fayde</h2>
+                    <p class="text-slate-600">Apne comfort zone mein rehkar high paying remote jobs mein career banayein.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Benefit Card 1 -->
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl font-bold mb-5">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Flexible Work Hours</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Full-time ya Part-time? Aap khud tay karein aapke working hours. Perfect for students, homemakers & pros.
+                        </p>
+                    </div>
+
+                    <!-- Benefit Card 2 -->
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl font-bold mb-5">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Zero Transport Expense</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Daily traffic aur travel ka kharcha bilkul ₹0. Apni mehnat ki kamayi ka 100% savings karein.
+                        </p>
+                    </div>
+
+                    <!-- Benefit Card 3 -->
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl font-bold mb-5">
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Pan-India & Global Jobs</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Aap India ke kisi bhi shahar ya gaon se international & top metro companies ke liye kaam kar sakte hain.
+                        </p>
+                    </div>
+
+                    <!-- Benefit Card 4 -->
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <div class="w-14 h-14 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-2xl font-bold mb-5">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Work-Life Balance</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Apne parivaar ke saath zyada waqt bitayein aur bina kisi stress ke professional growth haasil karein.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Monthly Salary Estimator Widget -->
+        <section id="calculator" class="py-16 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-10 shadow-2xl">
+                    <div class="text-center max-w-2xl mx-auto mb-10">
+                        <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest bg-emerald-500/20 px-3 py-1 rounded-full">Interactive Earnings Calculator</span>
+                        <h2 class="text-3xl font-extrabold mt-3 text-white">Aap Kitna Kamayeinge? Check Karein!</h2>
+                        <p class="text-slate-300 text-sm mt-2">Apne hours aur work domain ke mutabiq estimated monthly salary dekhein.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Select Preferred Work Role:</label>
+                                <select id="roleSelect" onchange="calculateSalary()" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+                                    <option value="data_entry">Data Entry / Form Filling</option>
+                                    <option value="customer_support" selected>Customer Support / Telecalling</option>
+                                    <option value="content">Content Writing & Editing</option>
+                                    <option value="social_media">Social Media Manager / Ads</option>
+                                    <option value="tech">Web Developer / Software Engineer</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between font-medium text-sm mb-2">
+                                    <span>Daily Working Hours:</span>
+                                    <span id="hoursVal" class="text-brand-700 font-bold text-base">4 Hours / Day</span>
+                                </div>
+                                <input type="range" id="hoursInput" min="2" max="8" value="4" step="1" oninput="calculateSalary()" class="w-full accent-brand-500 h-2 bg-slate-700 rounded-lg cursor-pointer">
+                            </div>
+
+                            <div class="bg-slate-800/60 p-4 rounded-xl border border-slate-700 text-xs text-slate-400">
+                                <i class="fa-solid fa-circle-info text-brand-500 mr-1"></i> Based on verified market salary trends for remote talent across India.
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-tr from-brand-500 to-indigo-600 rounded-2xl p-8 text-center shadow-xl relative overflow-hidden">
+                            <div class="text-sm uppercase font-semibold text-white/80 tracking-wider">Estimated Monthly Income</div>
+                            <div class="text-4xl sm:text-5xl font-black text-white my-3" id="salaryDisplay">₹24,000 - ₹32,000</div>
+                            <div class="text-xs text-emerald-300 font-medium mb-6">Direct Bank Transfer / UPI Weekly or Monthly Payouts</div>
+                            
+                            <button onclick="openApplyModal('From Calculator Widget')" class="w-full bg-white text-slate-900 font-extrabold py-3.5 px-6 rounded-xl hover:bg-slate-100 transition-all shadow-lg text-sm mb-3">
+                                Claim This Salary Role <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                            <a href="https://t.me/+39Qbst0JEZNmNTll" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 text-xs text-sky-200 hover:text-white font-semibold">
+                                <i class="fa-brands fa-telegram"></i> Get Daily Salary Role Alerts On Telegram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filterable Job Openings Section -->
+        <section id="jobs" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                        <span class="text-brand-500 font-bold text-sm tracking-wider uppercase bg-brand-50 px-3 py-1 rounded-full">Top Remote Roles</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Featured Work From Home Jobs</h2>
+                    </div>
+                    
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="filterContainer">
+                        <button onclick="filterJobs('all')" class="filter-btn active bg-brand-500 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all">All Roles</button>
+                        <button onclick="filterJobs('support')" class="filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition-all">Customer Support</button>
+                        <button onclick="filterJobs('writing')" class="filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition-all">Writing & Data</button>
+                        <button onclick="filterJobs('marketing')" class="filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition-all">Marketing</button>
+                        <button onclick="filterJobs('tech')" class="filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition-all">Tech & IT</button>
+                    </div>
+                </div>
+
+                <!-- Job Cards Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="jobGrid">
+                    
+                    <!-- Job Card 1 -->
+                    <div class="job-card support bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-500 hover:shadow-lg transition-all">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">Immediate Hiring</span>
+                                <span class="text-xs text-slate-400 font-medium">Full-Time / Part-Time</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">Customer Support Executive</h3>
+                            <p class="text-xs text-slate-500 font-semibold mb-4">Voice & Inbound Chat Support (Hindi / English)</p>
+                            
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Good Communication Skills</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Smartphone or Laptop Required</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Freshers Can Apply</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between border-t border-slate-200/80 pt-4 mb-4">
+                                <span class="text-xs text-slate-500">Salary Package</span>
+                                <span class="text-lg font-extrabold text-slate-900">₹22,000 - ₹35,000 <span class="text-xs font-normal text-slate-500">/mo</span></span>
+                            </div>
+                            <button onclick="openApplyModal('Customer Support Executive')" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-3 rounded-xl transition-all shadow-md text-sm">
+                                Apply For Role
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Job Card 2 -->
+                    <div class="job-card writing bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-500 hover:shadow-lg transition-all">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">Flexible Timings</span>
+                                <span class="text-xs text-slate-400 font-medium">Freelance / Full-Time</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">Content Writer & Translator</h3>
+                            <p class="text-xs text-slate-500 font-semibold mb-4">Blogs, Articles & Social Media Copy</p>
+                            
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Basic Grammar & Writing Knowledge</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Flexible Work Schedule</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Weekly / Monthly Payout Options</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between border-t border-slate-200/80 pt-4 mb-4">
+                                <span class="text-xs text-slate-500">Salary Package</span>
+                                <span class="text-lg font-extrabold text-slate-900">₹25,000 - ₹45,000 <span class="text-xs font-normal text-slate-500">/mo</span></span>
+                            </div>
+                            <button onclick="openApplyModal('Content Writer & Translator')" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-3 rounded-xl transition-all shadow-md text-sm">
+                                Apply For Role
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Job Card 3 -->
+                    <div class="job-card marketing bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-500 hover:shadow-lg transition-all">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="bg-purple-100 text-purple-800 text-xs font-bold px-3 py-1 rounded-full">High Demand</span>
+                                <span class="text-xs text-slate-400 font-medium">Full-Time</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">Social Media & Ad Manager</h3>
+                            <p class="text-xs text-slate-500 font-semibold mb-4">Meta Ads, Instagram Leads & Engagement</p>
+                            
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Knowledge of Instagram & Facebook Ads</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Performance Incentives Included</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Laptop Required</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between border-t border-slate-200/80 pt-4 mb-4">
+                                <span class="text-xs text-slate-500">Salary Package</span>
+                                <span class="text-lg font-extrabold text-slate-900">₹30,000 - ₹55,000 <span class="text-xs font-normal text-slate-500">/mo</span></span>
+                            </div>
+                            <button onclick="openApplyModal('Social Media & Ad Manager')" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-3 rounded-xl transition-all shadow-md text-sm">
+                                Apply For Role
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Job Card 4 -->
+                    <div class="job-card writing bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-500 hover:shadow-lg transition-all">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full">Easy Entry</span>
+                                <span class="text-xs text-slate-400 font-medium">Part-Time</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">Data Entry Specialist</h3>
+                            <p class="text-xs text-slate-500 font-semibold mb-4">Excel, Form Filling & Document Entry</p>
+                            
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Basic Typing & Accuracy</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> MS Excel or Google Sheets Knowledge</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 10th/12th Pass Eligible</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between border-t border-slate-200/80 pt-4 mb-4">
+                                <span class="text-xs text-slate-500">Salary Package</span>
+                                <span class="text-lg font-extrabold text-slate-900">₹18,000 - ₹28,000 <span class="text-xs font-normal text-slate-500">/mo</span></span>
+                            </div>
+                            <button onclick="openApplyModal('Data Entry Specialist')" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-3 rounded-xl transition-all shadow-md text-sm">
+                                Apply For Role
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Job Card 5 -->
+                    <div class="job-card tech bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-500 hover:shadow-lg transition-all">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="bg-rose-100 text-rose-800 text-xs font-bold px-3 py-1 rounded-full">High Salary</span>
+                                <span class="text-xs text-slate-400 font-medium">Full-Time</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">Frontend Web Developer</h3>
+                            <p class="text-xs text-slate-500 font-semibold mb-4">HTML, CSS, React / Web UI Development</p>
+                            
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Responsive UI & JavaScript Proficiency</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Freshers or Experienced</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Remote Tech Team</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between border-t border-slate-200/80 pt-4 mb-4">
+                                <span class="text-xs text-slate-500">Salary Package</span>
+                                <span class="text-lg font-extrabold text-slate-900">₹50,000 - ₹95,000 <span class="text-xs font-normal text-slate-500">/mo</span></span>
+                            </div>
+                            <button onclick="openApplyModal('Frontend Web Developer')" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-3 rounded-xl transition-all shadow-md text-sm">
+                                Apply For Role
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Job Card 6 -->
+                    <div class="job-card support bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-500 hover:shadow-lg transition-all">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-3 py-1 rounded-full">Global Clients</span>
+                                <span class="text-xs text-slate-400 font-medium">Full-Time</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">Virtual Assistant</h3>
+                            <p class="text-xs text-slate-500 font-semibold mb-4">Email Management, Scheduling & Coordination</p>
+                            
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Good Organizational Skills</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> English Communication Required</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Work with Remote Clients</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between border-t border-slate-200/80 pt-4 mb-4">
+                                <span class="text-xs text-slate-500">Salary Package</span>
+                                <span class="text-lg font-extrabold text-slate-900">₹35,000 - ₹60,000 <span class="text-xs font-normal text-slate-500">/mo</span></span>
+                            </div>
+                            <button onclick="openApplyModal('Virtual Assistant')" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-3 rounded-xl transition-all shadow-md text-sm">
+                                Apply For Role
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works (3 Steps) -->
+        <section id="how-it-works" class="py-20 bg-slate-50 border-t border-slate-200/70">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-500 font-bold text-sm tracking-wider uppercase bg-brand-50 px-3 py-1 rounded-full">Simple 3 Steps Process</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Job Paana Ab Bilkul Aasaan Hai</h2>
+                    <p class="text-slate-600">Bina kisi fees ya lambe process ke 3 simple steps me job shuru karein.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 relative">
+                    <!-- Step 1 -->
+                    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative z-10 text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-brand-500 text-white text-2xl font-black flex items-center justify-center mx-auto mb-6 shadow-lg shadow-brand-500/30">
+                            1
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Free Profile Register Karein</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Apna naam, contact number aur role submit karein. Zero registration fee.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative z-10 text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-telegram-500 text-white text-2xl font-black flex items-center justify-center mx-auto mb-6 shadow-lg shadow-telegram-500/30">
+                            2
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Telegram & HR Verification</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Telegram & Call ke zariye matching job profiles aur direct HR contacts share kiye jaate hain.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative z-10 text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-emerald-500 text-white text-2xl font-black flex items-center justify-center mx-auto mb-6 shadow-lg shadow-emerald-500/30">
+                            3
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Work & Direct Payouts</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Ghar se kaam start karein aur har week/month seedhe Bank account me income receive karein.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Candidate Testimonials -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-500 font-bold text-sm tracking-wider uppercase bg-brand-50 px-3 py-1 rounded-full">Real Candidate Reviews</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Humare Candidates Kya Kehte Hain</h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-6 italic">"Mujhe Telegram channel ke through Customer Support ki job mili. Pehle month hi ₹28,000 ka payout credit hua. Totally genuine platform!"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center text-sm">P</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Priya Sharma</h4>
+                                <span class="text-xs text-slate-400">Jaipur, Rajasthan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-6 italic">"Bina kisi registration fee ke direct HR call aaya. Ab main ghar se Data Entry ka kaam kar raha hoon daily 4 ghante."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-telegram-500 text-white font-bold flex items-center justify-center text-sm">R</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Rohit Verma</h4>
+                                <span class="text-xs text-slate-400">Lucknow, UP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-6 italic">"Telegram channel par daily fast alerts milne se instant apply kar diya. Flexible timings for housewives!"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-emerald-500 text-white font-bold flex items-center justify-center text-sm">S</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Sunita Patel</h4>
+                                <span class="text-xs text-slate-400">Ahmedabad, Gujarat</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Accordion Section -->
+        <section id="faqs" class="py-20 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-brand-500 font-bold text-sm tracking-wider uppercase bg-brand-50 px-3 py-1 rounded-full">Got Questions?</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-3">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Kya mujhe koi registration fee pay karni hogi?</span>
+                            <i class="fa-solid fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden p-5 pt-0 text-sm text-slate-600 border-t border-slate-100">
+                            Bilkul nahi! RemoteKaro platform par sabhi candidates ke liye apply karna 100% Free hai. Hum kabhi kisi tarah ki joining fee nahi lete.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Telegram Channel me judne ke kya fayde hain?</span>
+                            <i class="fa-solid fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden p-5 pt-0 text-sm text-slate-600 border-t border-slate-100">
+                            Telegram par daily instant job updates, direct HR WhatsApp/Email contacts aur direct hiring links upload hote hain pehle aao pehle paao basis par.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span>Mera salary payout kab aur kaise milega?</span>
+                            <i class="fa-solid fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden p-5 pt-0 text-sm text-slate-600 border-t border-slate-100">
+                            Payout aapke job contract ke according Weekly ya Monthly basis par direct Bank NEFT/IMPS ya UPI dwara credit hota hai.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA Banner with Telegram Link -->
+        <section class="py-16 bg-gradient-to-r from-brand-600 via-indigo-600 to-brand-500 text-white relative overflow-hidden">
+            <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Aaj Hi Work From Home Journey Shuru Karein!</h2>
+                <p class="text-indigo-100 text-base max-w-2xl mx-auto mb-8">
+                    Thousands of open positions are waiting for you. Apply now in under 1 minute or join our active Telegram group.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button onclick="openApplyModal('Bottom Banner CTA')" class="w-full sm:w-auto bg-white text-slate-900 font-extrabold text-lg px-8 py-4 rounded-2xl hover:bg-slate-100 shadow-2xl transition-all hover:scale-105">
+                        Start Applying Now (Free) <i class="fa-solid fa-bolt text-amber-500 ml-2"></i>
+                    </button>
+                    <a href="https://t.me/+39Qbst0JEZNmNTll" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-telegram-500 hover:bg-telegram-600 text-white font-extrabold text-lg px-8 py-4 rounded-2xl shadow-2xl transition-all hover:scale-105 flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-telegram text-2xl"></i>
+                        <span>Join Telegram Community</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-laptop-house"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white">RemoteKaro</span>
+                    </div>
+                    <p class="text-xs leading-relaxed">
+                        India's trusted work-from-home portal connecting job seekers directly with verified remote employers.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3">Popular Categories</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#jobs" class="hover:text-white transition-colors">Customer Service</a></li>
+                        <li><a href="#jobs" class="hover:text-white transition-colors">Data Entry Jobs</a></li>
+                        <li><a href="#jobs" class="hover:text-white transition-colors">Content Writing</a></li>
+                        <li><a href="#jobs" class="hover:text-white transition-colors">Virtual Assistant</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3">Community Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li>
+                            <a href="https://t.me/+39Qbst0JEZNmNTll" target="_blank" rel="noopener noreferrer" class="hover:text-telegram-500 transition-colors font-bold text-telegram-500 flex items-center gap-1">
+                                <i class="fa-brands fa-telegram"></i> Telegram Channel
+                            </a>
+                        </li>
+                        <li><a href="#benefits" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#how-it-works" class="hover:text-white transition-colors">How it works</a></li>
+                        <li><a href="#faqs" class="hover:text-white transition-colors">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3">Support & Helpline</h4>
+                    <p class="text-xs mb-3">Questions? Join Telegram to chat directly with support.</p>
+                    <div class="flex items-center gap-2 text-xs text-white font-semibold">
+                        <i class="fa-solid fa-envelope text-brand-500"></i> support@remotekaro.in
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-white font-semibold mt-2">
+                        <i class="fa-brands fa-telegram text-telegram-500"></i> @RemoteKaroSupport
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-6 text-center text-xs">
+                © 2026 RemoteKaro. All rights reserved. Built for Remote Workers across India.
+            </div>
         </div>
-        <div class="float-chip two">📈 Reach growing steadily</div>
-      </div>
-    </div>
-  </div>
-</section>
+    </footer>
 
-<!-- ===================== SERVICES ===================== -->
-<section id="services">
-  <div class="container">
-    <div class="section-head reveal">
-      <h2>Our Digital Marketing Services</h2>
-      <p>Pick a service to see what's included, tell us a bit about your business, and continue the conversation on WhatsApp.</p>
-    </div>
-    <div class="services-grid" id="servicesGrid"></div>
-  </div>
-</section>
+    <!-- STICKY FLOATING TELEGRAM BUTTON (Bottom Right Corner) -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+        <!-- Floating Label -->
+        <a href="https://t.me/+39Qbst0JEZNmNTll" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-2 bg-slate-900/90 text-white text-xs font-bold px-3.5 py-2 rounded-xl shadow-xl backdrop-blur-md border border-slate-700 hover:bg-slate-900 transition-all">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>Join Telegram Channel</span>
+        </a>
 
-<!-- ===================== WHY US ===================== -->
-<section id="why-us">
-  <div class="container">
-    <div class="section-head reveal">
-      <h2>Why Work With Praveen Ads Agency</h2>
-      <p>A focused approach built around understanding your business first.</p>
+        <!-- Main Pulsing Circular Telegram Button -->
+        <a href="https://t.me/+39Qbst0JEZNmNTll" target="_blank" rel="noopener noreferrer" aria-label="Join Telegram Channel" class="relative group">
+            <span class="absolute -inset-1 rounded-full bg-telegram-500 pulse-ring-effect -z-10"></span>
+            <div class="w-14 h-14 rounded-full bg-telegram-500 hover:bg-telegram-600 text-white flex items-center justify-center text-2xl shadow-2xl hover:scale-110 active:scale-95 transition-all">
+                <i class="fa-brands fa-telegram"></i>
+            </div>
+        </a>
     </div>
-    <div class="why-grid">
-      <div class="why-card reveal">
-        <div class="num">01</div>
-        <h4>Strategy First</h4>
-        <p>We focus on understanding the business and objective before setting up campaigns.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="num">02</div>
-        <h4>Performance Focused</h4>
-        <p>Campaigns are monitored and optimized based on available performance data.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="num">03</div>
-        <h4>WhatsApp Communication</h4>
-        <p>Make it easy for potential customers to start a conversation directly.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="num">04</div>
-        <h4>Multiple Digital Solutions</h4>
-        <p>Meta Ads, WhatsApp API, Social Media Marketing and Google Business Profile under one agency.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ===================== PROCESS ===================== -->
-<section id="process">
-  <div class="container">
-    <div class="section-head reveal">
-      <h2>How It Works</h2>
-      <p>A simple four-step path from first message to an active plan.</p>
-    </div>
-    <div class="process-wrap">
-      <div class="process-line"></div>
-      <div class="process-grid">
-        <div class="process-step reveal"><div class="process-dot">01</div><h4>Tell Us About Your Business</h4><p>Share what you do and what you're trying to achieve.</p></div>
-        <div class="process-step reveal"><div class="process-dot">02</div><h4>Choose Your Service</h4><p>Pick the service that fits — Meta Ads, WhatsApp API, and more.</p></div>
-        <div class="process-step reveal"><div class="process-dot">03</div><h4>Discuss On WhatsApp</h4><p>Continue the conversation directly with our team.</p></div>
-        <div class="process-step reveal"><div class="process-dot">04</div><h4>Plan &amp; Execute</h4><p>We put together and run the right solution for you.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Application Modal with Telegram Success CTA -->
+    <div id="applyModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative animate-in fade-in zoom-in duration-200">
+            <!-- Close Button -->
+            <button onclick="closeApplyModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 text-xl font-bold p-1">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
 
-<!-- ===================== CALLOUT ===================== -->
-<section>
-  <div class="container">
-    <div class="callout reveal">
-      <div>
-        <h3>Not Sure Which Service You Need?</h3>
-        <p>Tell us about your business and what you want to achieve. We'll discuss the suitable digital marketing solution with you.</p>
-      </div>
-      <button class="btn btn-whatsapp" onclick="openGeneralWhatsApp()">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.7-1-2.4-1.7-.6-.6-1.1-1.3-1.5-2.1-.1-.2 0-.4.1-.5.2-.2.4-.4.6-.6.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.1.6 2.2 1.3 3.2 1.4 2 3.2 3.5 5.4 4.3 1 .4 1.9.5 2.5.4.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.4-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
-        Talk to Us on WhatsApp
-      </button>
-    </div>
-  </div>
-</section>
+            <!-- Form State -->
+            <div id="modalFormContainer">
+                <div class="mb-6">
+                    <span class="text-emerald-600 bg-emerald-50 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Free Direct Application</span>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mt-2" id="modalTitle">Apply For Remote Role</h3>
+                    <p class="text-slate-500 text-xs mt-1">Fill out your details to receive instant HR callback & Telegram match.</p>
+                </div>
 
-<!-- ===================== ABOUT ===================== -->
-<section id="about">
-  <div class="container about-grid">
-    <div class="section-head reveal" style="margin-bottom:0;">
-      <h2>About Praveen Ads Agency</h2>
-      <p style="margin-top:16px;">Praveen Ads Agency works with businesses that want a clearer, more organized approach to their online presence — from running ads to managing customer conversations on WhatsApp.</p>
-    </div>
-    <div class="about-copy reveal">
-      <p>Rather than treating every business the same, we start by understanding what you're trying to achieve, then match it to the right combination of services — whether that's Meta Ads, an Agency Ad Account, WhatsApp API, Social Media Marketing, or your Google Business Profile.</p>
-      <ul class="about-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Practical, business-first approach to digital marketing</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Direct WhatsApp communication instead of long forms</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Multiple services under one agency, coordinated together</li>
-      </ul>
-    </div>
-  </div>
-</section>
+                <form id="modalForm" onsubmit="handleModalSubmit(event)" class="space-y-4">
+                    <input type="hidden" id="selectedRoleInput" name="role" value="General Application">
 
-<!-- ===================== LEAD FORM ===================== -->
-<section id="lead">
-  <div class="container">
-    <div class="lead-wrap reveal">
-      <div class="lead-copy">
-        <h2>Let's Talk About Your Business</h2>
-        <p>Tell us what you need and our team will connect with you on WhatsApp.</p>
-      </div>
-      <form class="form-grid" id="leadForm" novalidate>
-        <div class="field" id="f-name">
-          <label for="ln">Name</label>
-          <input type="text" id="ln" placeholder="Your name">
-          <span class="err-msg">Please enter your name.</span>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Aapka Full Name</label>
+                        <input type="text" id="modalName" required placeholder="e.g. Anish Kumar" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">WhatsApp Number</label>
+                            <input type="tel" id="modalPhone" required pattern="[0-9]{10}" placeholder="10 Digit Number" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Email Address</label>
+                            <input type="email" id="modalEmail" required placeholder="name@email.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Experience Level</label>
+                            <select id="modalExp" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm text-slate-700">
+                                <option value="Fresher">Fresher (0 Years)</option>
+                                <option value="1-2 Years">1 - 2 Years</option>
+                                <option value="3+ Years">3+ Years</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Current State/City</label>
+                            <input type="text" id="modalCity" required placeholder="e.g. Delhi / Patna" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Upload Resume (Optional)</label>
+                        <div class="border-2 border-dashed border-slate-200 rounded-xl p-4 text-center cursor-pointer hover:border-brand-500 transition-colors bg-slate-50" onclick="document.getElementById('resumeFile').click()">
+                            <i class="fa-solid fa-cloud-arrow-up text-brand-500 text-2xl mb-1"></i>
+                            <p class="text-xs text-slate-600 font-semibold" id="fileText">Click to select PDF/DOC file</p>
+                            <input type="file" id="resumeFile" class="hidden" accept=".pdf,.doc,.docx" onchange="updateFileName(this)">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-extrabold py-3.5 rounded-xl shadow-lg shadow-brand-500/30 transition-all text-sm uppercase tracking-wider">
+                        Submit Free Application <i class="fa-solid fa-check-circle ml-1"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Post-Submission Telegram Success Screen -->
+            <div id="modalSuccessContainer" class="hidden text-center py-4">
+                <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold text-slate-900 mb-2">Application Received!</h3>
+                <p class="text-slate-600 text-sm mb-6">
+                    Aapka profile shortlisting ke liye submit ho chuka hai. Fast HR updates aur instant callback ke liye hamara official Telegram channel join karein!
+                </p>
+
+                <a href="https://t.me/+39Qbst0JEZNmNTll" target="_blank" rel="noopener noreferrer" class="w-full bg-telegram-500 hover:bg-telegram-600 text-white font-extrabold py-4 px-6 rounded-2xl shadow-xl shadow-telegram-500/30 flex items-center justify-center gap-2.5 text-base transition-all mb-3">
+                    <i class="fa-brands fa-telegram text-2xl"></i>
+                    <span>Join Official Telegram Channel Now</span>
+                </a>
+
+                <button onclick="closeApplyModal()" class="text-slate-400 text-xs font-semibold hover:text-slate-600 underline mt-2">
+                    Close Window
+                </button>
+            </div>
         </div>
-        <div class="field" id="f-business">
-          <label for="lb">Business Name</label>
-          <input type="text" id="lb" placeholder="Your business name">
-          <span class="err-msg">Please enter your business name.</span>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 left-5 z-50 hidden bg-emerald-600 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-2xl"></i>
+        <div>
+            <h5 class="font-bold text-sm">Application Successfully Submitted!</h5>
+            <p class="text-xs text-emerald-100">Join our Telegram channel for direct updates.</p>
         </div>
-        <div class="field" id="f-phone">
-          <label for="lp">WhatsApp Number</label>
-          <input type="tel" id="lp" placeholder="e.g. 9256777139">
-          <span class="err-msg">Please enter a valid WhatsApp number.</span>
-        </div>
-        <div class="field" id="f-service">
-          <label for="ls">Select Service</label>
-          <select id="ls">
-            <option value="">Choose a service</option>
-            <option value="Meta Ads">Meta Ads</option>
-            <option value="WhatsApp API">WhatsApp API</option>
-            <option value="Agency Ad Account">Agency Ad Account</option>
-            <option value="Social Media Marketing">Social Media Marketing</option>
-            <option value="Google Business Profile">Google Business Profile</option>
-          </select>
-          <span class="err-msg">Please select a service.</span>
-        </div>
-        <div class="field full" id="f-req">
-          <label for="lr">Your Requirement</label>
-          <textarea id="lr" placeholder="Briefly describe what you need help with"></textarea>
-          <span class="err-msg">Please describe your requirement.</span>
-        </div>
-        <div class="field full">
-          <button type="submit" class="btn btn-whatsapp form-submit">Send Requirement on WhatsApp</button>
-        </div>
-      </form>
     </div>
-  </div>
-</section>
 
-<!-- ===================== FAQ ===================== -->
-<section id="faq">
-  <div class="container">
-    <div class="section-head reveal">
-      <h2>Frequently Asked Questions</h2>
-      <p>Quick answers about our services and how to get started.</p>
-    </div>
-    <div class="faq-list" id="faqList"></div>
-  </div>
-</section>
+    <!-- Interactive JavaScript Logic -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-<!-- ===================== CONTACT ===================== -->
-<section id="contact">
-  <div class="container contact-grid">
-    <div class="reveal">
-      <div class="section-head" style="margin-bottom:24px;">
-        <h2>Ready to Discuss Your Business?</h2>
-        <p>Start a conversation on WhatsApp and tell us what you're looking to achieve.</p>
-      </div>
-      <button class="btn btn-whatsapp" onclick="openGeneralWhatsApp()">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.7-1-2.4-1.7-.6-.6-1.1-1.3-1.5-2.1-.1-.2 0-.4.1-.5.2-.2.4-.4.6-.6.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.1.6 2.2 1.3 3.2 1.4 2 3.2 3.5 5.4 4.3 1 .4 1.9.5 2.5.4.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.4-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
-        Start a WhatsApp Conversation
-      </button>
-    </div>
-    <div class="reveal">
-      <div class="contact-card">
-        <div class="brand"><img class="brand-mark" src="plog.jpeg" alt="Praveen Ads Agency logo"> Praveen Ads Agency</div>
-        <div class="contact-services">Meta Ads &nbsp;|&nbsp; WhatsApp API &nbsp;|&nbsp; Agency Ad Account<br>Social Media Marketing &nbsp;|&nbsp; Google Business Profile</div>
-        <div class="contact-links">
-          <a class="icon-link" href="#" onclick="openGeneralWhatsApp(); return false;" aria-label="WhatsApp" title="WhatsApp">
-            <svg viewBox="0 0 24 24" fill="var(--whatsapp)"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.7-1-2.4-1.7-.6-.6-1.1-1.3-1.5-2.1-.1-.2 0-.4.1-.5.2-.2.4-.4.6-.6.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.1.6 2.2 1.3 3.2 1.4 2 3.2 3.5 5.4 4.3 1 .4 1.9.5 2.5.4.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.4-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        // Interactive Monthly Salary Calculator
+        function calculateSalary() {
+            const hours = parseInt(document.getElementById('hoursInput').value);
+            const role = document.getElementById('roleSelect').value;
+            
+            document.getElementById('hoursVal').innerText = `${hours} Hours / Day`;
+            
+            let baseRate = 250;
+            if (role === 'data_entry') baseRate = 200;
+            if (role === 'customer_support') baseRate = 280;
+            if (role === 'content') baseRate = 350;
+            if (role === 'social_media') baseRate = 420;
+            if (role === 'tech') baseRate = 750;
+            
+            const monthlyMin = Math.round((hours * baseRate * 25) / 1000) * 1000;
+            const monthlyMax = Math.round(monthlyMin * 1.35 / 1000) * 1000;
 
-<!-- ===================== FOOTER ===================== -->
-<footer>
-  <div class="container footer-grid">
-    <div>
-      <div class="brand"><img class="brand-mark" src="plog.jpeg" alt="Praveen Ads Agency logo"> Praveen Ads Agency</div>
-      <p class="footer-tag">Digital Marketing Solutions for Growing Businesses</p>
-    </div>
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-      <a href="#" onclick="return false;">Privacy Policy</a>
-      <a href="#" onclick="return false;">Terms &amp; Conditions</a>
-    </div>
-  </div>
-  <div class="footer-bottom">© 2026 Praveen Ads Agency. All rights reserved.</div>
-</footer>
+            document.getElementById('salaryDisplay').innerText = `₹${monthlyMin.toLocaleString('en-IN')} - ₹${monthlyMax.toLocaleString('en-IN')}`;
+        }
 
-<!-- ===================== FLOATING WHATSAPP ===================== -->
-<button class="fab" onclick="openGeneralWhatsApp()" aria-label="Chat on WhatsApp">
-  <span class="fab-tooltip">Chat with us</span>
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.7-1-2.4-1.7-.6-.6-1.1-1.3-1.5-2.1-.1-.2 0-.4.1-.5.2-.2.4-.4.6-.6.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.1.6 2.2 1.3 3.2 1.4 2 3.2 3.5 5.4 4.3 1 .4 1.9.5 2.5.4.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.4-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
-</button>
+        // Filter Jobs
+        function filterJobs(category) {
+            const cards = document.querySelectorAll('.job-card');
+            const btns = document.querySelectorAll('.filter-btn');
+            
+            btns.forEach(btn => {
+                btn.classList.remove('bg-brand-500', 'text-white');
+                btn.classList.add('bg-slate-100', 'text-slate-700');
+            });
+            event.target.classList.add('bg-brand-500', 'text-white');
+            event.target.classList.remove('bg-slate-100', 'text-slate-700');
 
-<!-- ===================== BACK TO TOP ===================== -->
-<button class="to-top" id="toTop" aria-label="Back to top">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-</button>
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
 
-<!-- ===================== TOAST ===================== -->
-<div class="toast" id="toast"><span class="dot"></span><span id="toastText">Opening WhatsApp…</span></div>
+        // FAQ Toggle
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
 
-<!-- ===================== SERVICE MODAL ===================== -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-head">
-      <div class="modal-icon" id="modalIcon"></div>
-      <button class="modal-close" onclick="closeModal()" aria-label="Close">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
-    </div>
-    <h3 id="modalTitle"></h3>
-    <p class="desc" id="modalDesc"></p>
-    <div class="modal-features" id="modalFeatures"></div>
+        // Modal Logic
+        function openApplyModal(roleName) {
+            document.getElementById('modalFormContainer').classList.remove('hidden');
+            document.getElementById('modalSuccessContainer').classList.add('hidden');
+            document.getElementById('modalTitle').innerText = `Apply For: ${roleName}`;
+            document.getElementById('selectedRoleInput').value = roleName;
+            document.getElementById('applyModal').classList.remove('hidden');
+        }
 
-    <div class="modal-form">
-      <p style="font-size:0.98rem; font-weight:600; color:#fff; margin-top:6px;">Tell us about your requirement</p>
-      <div class="field" id="m-f-business">
-        <label for="mBusiness">Business Name</label>
-        <input type="text" id="mBusiness" placeholder="Enter business name">
-        <span class="err-msg">Please enter your business name.</span>
-      </div>
-      <div class="field" id="m-f-need">
-        <label for="mNeed">What do you need?</label>
-        <select id="mNeed">
-          <option value="">Select requirement</option>
-          <option value="Lead Generation">Lead Generation</option>
-          <option value="Brand Awareness">Brand Awareness</option>
-          <option value="Sales / Conversions">Sales / Conversions</option>
-          <option value="Setup & Consultation">Setup &amp; Consultation</option>
-          <option value="Other">Other</option>
-        </select>
-        <span class="err-msg">Please select what you need.</span>
-      </div>
-      <div class="field">
-        <label for="mBudget">Monthly Budget (optional)</label>
-        <input type="text" id="mBudget" placeholder="e.g. ₹15,000/month">
-      </div>
-      <button class="btn btn-whatsapp form-submit" onclick="submitModal()">Continue on WhatsApp →</button>
-    </div>
-  </div>
-</div>
+        function closeApplyModal() {
+            document.getElementById('applyModal').classList.add('hidden');
+        }
 
-<script>
-  /* ===================== CONFIG ===================== */
-  const WHATSAPP_NUMBER = "9256777139"; // TODO: replace with the agency's real WhatsApp number (country code + number, no + or spaces)
+        function updateFileName(input) {
+            if (input.files && input.files[0]) {
+                document.getElementById('fileText').innerText = `Selected: ${input.files[0].name}`;
+            }
+        }
 
-  function openWhatsApp(message){
-    const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
-    window.open(url, "_blank");
-    showToast("Opening WhatsApp…");
-  }
+        // Form Handlers
+        function handleQuickSubmit(e) {
+            e.preventDefault();
+            showToast();
+            document.getElementById('quickHeroForm').reset();
+            openApplyModal('Quick Match Hero Form');
+            document.getElementById('modalFormContainer').classList.add('hidden');
+            document.getElementById('modalSuccessContainer').classList.remove('hidden');
+        }
 
-  function openGeneralWhatsApp(){
-    openWhatsApp("Hello Praveen Ads Agency, I would like to know more about your digital marketing services.");
-  }
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            document.getElementById('modalFormContainer').classList.add('hidden');
+            document.getElementById('modalSuccessContainer').classList.remove('hidden');
+            showToast();
+            document.getElementById('modalForm').reset();
+            document.getElementById('fileText').innerText = "Click to select PDF/DOC file";
+        }
 
-  /* ===================== SERVICES DATA ===================== */
-  const services = [
-    {
-      id: "meta-ads",
-      title: "Meta Ads",
-      desc: "Run targeted advertising campaigns across Facebook and Instagram to reach relevant audiences and generate enquiries.",
-      features: ["Campaign Setup","Audience Targeting","Creative Strategy","Campaign Optimization","Performance Tracking"],
-      cta: "Get Meta Ads Consultation →",
-      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/></svg>',
-      baseMessage: "Hello Praveen Ads Agency, I am interested in Meta Ads. I would like to discuss my business and advertising requirements."
-    },
-    {
-      id: "whatsapp-api",
-      title: "WhatsApp API",
-      desc: "Set up WhatsApp-based business communication and automation solutions to manage customer conversations more efficiently.",
-      features: ["WhatsApp Business API","Customer Communication","Automation","Templates","Lead Management"],
-      cta: "Get WhatsApp API Consultation →",
-      icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.7-1-2.4-1.7-.6-.6-1.1-1.3-1.5-2.1-.1-.2 0-.4.1-.5.2-.2.4-.4.6-.6.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.1.6 2.2 1.3 3.2 1.4 2 3.2 3.5 5.4 4.3 1 .4 1.9.5 2.5.4.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.4-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>',
-      baseMessage: "Hello Praveen Ads Agency, I am interested in WhatsApp API. I would like to know about the setup, features and pricing."
-    },
-    {
-      id: "agency-account",
-      title: "Agency Ad Account",
-      desc: "Business advertising account solutions for managing digital advertising campaigns with a structured agency setup.",
-      features: ["Agency Account Setup","Campaign Management","Account Structure","Business Support","Advertising Assistance"],
-      cta: "Ask About Agency Account →",
-      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>',
-      baseMessage: "Hello Praveen Ads Agency, I am interested in an Agency Ad Account. Please share the details, requirements and pricing."
-    },
-    {
-      id: "social-media",
-      title: "Social Media Marketing",
-      desc: "Build a consistent social media presence with content planning, creative strategy and audience engagement.",
-      features: ["Social Media Strategy","Content Planning","Post Design","Audience Engagement","Page Management"],
-      cta: "Discuss Social Media Marketing →",
-      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>',
-      baseMessage: "Hello Praveen Ads Agency, I am interested in Social Media Marketing. I would like to discuss my business requirements."
-    },
-    {
-      id: "gbp",
-      title: "Google Business Profile",
-      desc: "Improve your local online presence and help customers discover your business on Google Search and Maps.",
-      features: ["Business Profile Setup","Profile Optimization","Business Information","Local Visibility","Review Strategy"],
-      cta: "Improve My Google Profile →",
-      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
-      baseMessage: "Hello Praveen Ads Agency, I am interested in Google Business Profile services. Please share the process and pricing."
-    }
-  ];
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+        }
 
-  const servicesGrid = document.getElementById("servicesGrid");
-  services.forEach(s => {
-    const card = document.createElement("button");
-    card.className = "service-card reveal";
-    card.setAttribute("type","button");
-    card.innerHTML = `
-      <div class="service-icon">${s.icon}</div>
-      <h3>${s.title}</h3>
-      <p class="desc">${s.desc}</p>
-      <ul class="service-features">
-        ${s.features.map(f => `<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> ${f}</li>`).join("")}
-      </ul>
-      <span class="service-cta">${s.cta}</span>
-    `;
-    card.addEventListener("click", () => openModal(s.id));
-    servicesGrid.appendChild(card);
-  });
-
-  /* ===================== MODAL ===================== */
-  let activeService = null;
-  const modalOverlay = document.getElementById("modalOverlay");
-
-  function openModal(id){
-    activeService = services.find(s => s.id === id);
-    if(!activeService) return;
-    document.getElementById("modalIcon").innerHTML = activeService.icon;
-    document.getElementById("modalTitle").textContent = activeService.title;
-    document.getElementById("modalDesc").textContent = activeService.desc;
-    document.getElementById("modalFeatures").innerHTML = activeService.features.map(f => `<span>${f}</span>`).join("");
-    document.getElementById("mBusiness").value = "";
-    document.getElementById("mNeed").value = "";
-    document.getElementById("mBudget").value = "";
-    clearError("m-f-business"); clearError("m-f-need");
-    modalOverlay.classList.add("show");
-    document.body.style.overflow = "hidden";
-  }
-  function closeModal(){
-    modalOverlay.classList.remove("show");
-    document.body.style.overflow = "";
-  }
-  modalOverlay.addEventListener("click", e => { if(e.target === modalOverlay) closeModal(); });
-  document.addEventListener("keydown", e => { if(e.key === "Escape") closeModal(); });
-
-  function setError(fieldId, isError){
-    const el = document.getElementById(fieldId);
-    if(!el) return;
-    el.classList.toggle("error", isError);
-  }
-  function clearError(fieldId){ setError(fieldId, false); }
-
-  function submitModal(){
-    if(!activeService) return;
-    const business = document.getElementById("mBusiness").value.trim();
-    const need = document.getElementById("mNeed").value;
-    const budget = document.getElementById("mBudget").value.trim();
-
-    let valid = true;
-    if(!business){ setError("m-f-business", true); valid = false; } else { clearError("m-f-business"); }
-    if(!need){ setError("m-f-need", true); valid = false; } else { clearError("m-f-need"); }
-    if(!valid) return;
-
-    let msg = `Hello Praveen Ads Agency,\n\nI am interested in ${activeService.title}.\n\nBusiness Name: ${business}\nRequirement: ${need}`;
-    if(budget){ msg += `\nBudget: ${budget}`; }
-    msg += `\n\nI would like to discuss further.`;
-
-    openWhatsApp(msg);
-    closeModal();
-  }
-
-  /* ===================== LEAD FORM ===================== */
-  const leadForm = document.getElementById("leadForm");
-  leadForm.addEventListener("submit", function(e){
-    e.preventDefault();
-    const name = document.getElementById("ln").value.trim();
-    const business = document.getElementById("lb").value.trim();
-    const phone = document.getElementById("lp").value.trim();
-    const service = document.getElementById("ls").value;
-    const req = document.getElementById("lr").value.trim();
-
-    let valid = true;
-    if(!name){ setError("f-name", true); valid = false; } else clearError("f-name");
-    if(!business){ setError("f-business", true); valid = false; } else clearError("f-business");
-    if(!phone || phone.replace(/\D/g,"").length < 10){ setError("f-phone", true); valid = false; } else clearError("f-phone");
-    if(!service){ setError("f-service", true); valid = false; } else clearError("f-service");
-    if(!req){ setError("f-req", true); valid = false; } else clearError("f-req");
-    if(!valid) return;
-
-    const msg = `Hello Praveen Ads Agency,\n\nName: ${name}\nBusiness: ${business}\nService: ${service}\nRequirement: ${req}\nWhatsApp: ${phone}\n\nPlease contact me.`;
-    openWhatsApp(msg);
-    leadForm.reset();
-  });
-
-  /* ===================== FAQ ===================== */
-  const faqs = [
-    { q: "What digital marketing services do you provide?", a: "We provide Meta Ads, WhatsApp API setup, Agency Ad Accounts, Social Media Marketing and Google Business Profile services." },
-    { q: "Do you provide Meta Ads campaign setup?", a: "Yes. We handle campaign setup, audience targeting, creative strategy, optimization and performance tracking for Meta Ads." },
-    { q: "What is WhatsApp API?", a: "WhatsApp API allows businesses to manage customer conversations, automation and templates through WhatsApp Business tools." },
-    { q: "What is an Agency Ad Account?", a: "An Agency Ad Account is a structured advertising account setup used to manage digital campaigns under an agency arrangement." },
-    { q: "Do you provide Social Media Marketing?", a: "Yes. This includes content planning, post design, page management and audience engagement." },
-    { q: "Can you help with Google Business Profile?", a: "Yes. We help set up and optimize your Google Business Profile to improve local visibility on Search and Maps." },
-    { q: "How can I contact Praveen Ads Agency?", a: "You can reach us directly on WhatsApp using any of the chat buttons on this website." },
-    { q: "How do I get started?", a: "Choose a service, share a few details about your business, and continue the conversation on WhatsApp — our team will take it from there." }
-  ];
-  const faqList = document.getElementById("faqList");
-  faqs.forEach((f, i) => {
-    const item = document.createElement("div");
-    item.className = "faq-item reveal";
-    item.innerHTML = `
-      <button class="faq-q" aria-expanded="false">
-        ${f.q}
-        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq-a"><div class="faq-a-inner">${f.a}</div></div>
-    `;
-    const btn = item.querySelector(".faq-q");
-    const answer = item.querySelector(".faq-a");
-    btn.addEventListener("click", () => {
-      const isOpen = item.classList.contains("open");
-      document.querySelectorAll(".faq-item.open").forEach(o => {
-        o.classList.remove("open");
-        o.querySelector(".faq-a").style.maxHeight = null;
-        o.querySelector(".faq-q").setAttribute("aria-expanded","false");
-      });
-      if(!isOpen){
-        item.classList.add("open");
-        answer.style.maxHeight = answer.scrollHeight + "px";
-        btn.setAttribute("aria-expanded","true");
-      }
-    });
-    faqList.appendChild(item);
-  });
-
-  /* ===================== TOAST ===================== */
-  let toastTimer;
-  function showToast(text){
-    const toast = document.getElementById("toast");
-    document.getElementById("toastText").textContent = text;
-    toast.classList.add("show");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove("show"), 2600);
-  }
-
-  /* ===================== MOBILE MENU ===================== */
-  const hamburger = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobileMenu");
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("open");
-    mobileMenu.classList.toggle("show");
-  });
-  mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
-    hamburger.classList.remove("open");
-    mobileMenu.classList.remove("show");
-  }));
-
-  /* ===================== ACTIVE NAV + BACK TO TOP ===================== */
-  const navLinks = document.querySelectorAll(".nav-link");
-  const sections = document.querySelectorAll("section[id]");
-  const toTop = document.getElementById("toTop");
-
-  window.addEventListener("scroll", () => {
-    let current = "home";
-    sections.forEach(sec => {
-      const rect = sec.getBoundingClientRect();
-      if(rect.top <= 120 && rect.bottom > 120) current = sec.id;
-    });
-    navLinks.forEach(l => l.classList.toggle("active", l.getAttribute("href") === "#" + current));
-    toTop.classList.toggle("show", window.scrollY > 500);
-  });
-  toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
-
-  /* ===================== SCROLL REVEAL ===================== */
-  const revealEls = document.querySelectorAll(".reveal");
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add("in");
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  revealEls.forEach(el => io.observe(el));
-</script>
+        // Close modal on background click
+        window.onclick = function(event) {
+            const modal = document.getElementById('applyModal');
+            if (event.target === modal) {
+                closeApplyModal();
+            }
+        }
+    </script>
 </body>
 </html>
